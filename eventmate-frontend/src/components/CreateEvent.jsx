@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-const EVENTS_URL = ${import.meta.env.VITE_API_BASE_URL}/api/events;
+const EVENTS_URL = \${import.meta.env.VITE_API_BASE_URL}/api/events`;`
 
 function CreateEvent({ token }) {
   const [title, setTitle] = useState('');
@@ -115,3 +115,4 @@ function CreateEvent({ token }) {
 
 
 export default CreateEvent;
+
