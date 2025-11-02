@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-// Your backend's login URL
-const LOGIN_URL = 'http://localhost:5000/api/auth/login';
+const LOGIN_URL = ${import.meta.env.VITE_API_BASE_URL}/api/auth/login;
 
 function Login({ onLoginSuccess }) {
-  const [email, setEmail] = useState('creator1@example.com'); // Pre-filled for easy testing
-  const [password, setPassword] = useState('mypassword123'); // Pre-filled for easy testing
+  const [email, setEmail] = useState('creator1@example.com'); 
+  const [password, setPassword] = useState('mypassword123'); 
   const [error, setError] = useState('');
 
   const handleSubmit = async (e) => {
@@ -63,5 +62,6 @@ function Login({ onLoginSuccess }) {
     </div>
   );
 }
+
 
 export default Login;
