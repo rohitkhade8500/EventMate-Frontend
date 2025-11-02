@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-const LOGIN_URL = \${import.meta.env.VITE_API_BASE_URL}/api/auth/login`;`
+const LOGIN_URL = `${import.meta.env.VITE_API_BASE_URL}/api/auth/login`;
 
 function Login({ onLoginSuccess }) {
   const [email, setEmail] = useState('creator1@example.com'); 
@@ -65,4 +65,5 @@ function Login({ onLoginSuccess }) {
 
 
 export default Login;
+
 
