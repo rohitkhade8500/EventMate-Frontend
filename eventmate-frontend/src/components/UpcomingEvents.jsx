@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const API_URL = ${import.meta.env.VITE_API_BASE_URL}/api/events/upcoming;
+const API_URL = \${import.meta.env.VITE_API_BASE_URL}/api/events/upcoming`;`
 
 function UpcomingEvents() {
   const [events, setEvents] = useState([]);
@@ -67,3 +67,4 @@ function UpcomingEvents() {
 
 
 export default UpcomingEvents;
+
