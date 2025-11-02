@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-// Define your backend's base URL
-const API_URL = 'http://localhost:5000/api/events/upcoming';
+const API_URL = ${import.meta.env.VITE_API_BASE_URL}/api/events/upcoming;
 
 function UpcomingEvents() {
   const [events, setEvents] = useState([]);
@@ -65,5 +64,6 @@ function UpcomingEvents() {
     </div>
   );
 }
+
 
 export default UpcomingEvents;
