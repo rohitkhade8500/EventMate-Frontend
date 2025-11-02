@@ -4,9 +4,6 @@ const jwt = require('jsonwebtoken');
 
 // Helper function to create a token
 const generateToken = (id) => {
-  // Sign a new token with the user's ID
-  // The secret is from your .env file
-  // It expires in 30 days
   return jwt.sign({ id }, process.env.JWT_SECRET, {
     expiresIn: '30d',
   });
@@ -26,7 +23,7 @@ const registerUser = async (req, res) => {
       return res.status(400).json({ message: 'User already exists' });
     }
 
-    // 3. Create a new user document (password will be hashed by the 'pre-save' hook in your model)
+    // 3. Create a new user document (password will be hashed by the 'pre-save' hook in model)
     const user = new User({
       email,
       password,
@@ -83,4 +80,5 @@ const loginUser = async (req, res) => {
 module.exports = {
   registerUser,
   loginUser,
+
 };
